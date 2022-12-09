@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Splitter</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h3>SPLI</br> TTER</h3>
+
+  <div class="container">
+    <div class="tip-inputs">
+      <label for="bill">Bill</label><br />
+      <input type="text" class="bill_pple" id="billPple">
+      <p id="select_tip_label">Select Tip %</p>
+      <div class="button-list">
+        <button onclick="five_percent()">5%</button>
+        <button onclick="ten_percent()">10%</button>
+        <button onclick="fifteen_percent()">15%</button>
+        <button onclick="twentyfv_percent()">25%</button>
+        <button onclick="fifty_percent()">50%</button>
+        <input type="text" placeholder="$Custom" id="custom_input">
+      </div>
+      <label for="bill">Number of People
+      </label><br />
+      <input type="text" class="bill_pple" placeholder="0">
+    </div>
+    <div class="tip-display-backg">
+      <div class="tip-display">
+        <p>Tip Amount <br /><span>/
+            person</span></p>
+        <p id="totPers_el">$0.00</p>
+        <p>Total <br /><span>/
+            person</span></p>
+        <p id="tip_el">$0.00</p>
+      </div>
+      <div></div>
+      <button id="btn" 
+      onclick="reset()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+
+    <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
