@@ -36,6 +36,7 @@ html, body {
 
 button,input,label{
   font-family:inherit;
+  min-width: 0;
   
 }
 
@@ -60,7 +61,9 @@ h3{
   width:70%;
   flex-basis:60%;
   flex-grow:1;
+  flex-shrink:0;
   margin:0 auto;
+  border-radius: 10px;
  }
 
 label{
@@ -73,7 +76,7 @@ label{
  border-radius:var(--border-radius);
  background-color:var(--color-neutral-5);
  color:var(--color-neutral-3); 
-border:none; 
+ border:none; 
  /*background-image: url("images/icon- 
  dollar.svg");*/
 }
@@ -116,6 +119,17 @@ background-color:var(--color-primary);
  background-color:var(--color-neutral-5);
  color:var(--color-neutral-3); 
  border:none;  
+ padding:6px; 
+}
+
+.visually-hidden:not(:focus):not(:active){
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  height:1px;  
+  overflow: hidden;
+  position: absolute;
+  white-space:nowrap;
+  width:1px;
 }
 
 .tip-display-backg{
@@ -135,16 +149,16 @@ background-color:var(--color-primary);
   row-gap: 20px;
 } 
 
-p:nth-child(odd){
-  font-size:12px;
-  color:var(--color-neutral-5);
+span{
+  color: var(--color-primary);
 }
 
-p:nth-child(even){
+.tip-display :nth-child(3){
+  font-size:40px;
   color:var(--color-primary);
-  font-size:24px;
   font-weight:var(--font-weight);
-}
+ }
+
 
 #btn{
  background-color:var(--color-primary);
@@ -158,6 +172,13 @@ p:nth-child(even){
 }
 
 /*adding a background $ to input box*/
-/*responsiveness 375*/
-/*span on person colour change*/
-/*padding around custom button*/
+
+
+@media screen and (max-width:375px) {
+  .body,
+  .container{
+    min-width:375px;
+ }
+  
+}
+
