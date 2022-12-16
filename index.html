@@ -19,7 +19,12 @@
   <div class="container">
     <div class="tip-inputs">
       <label for="bill">Bill</label><br />
-      <input type="text" class="bill_pple" id="billAmt" value="500">
+      <input type="text" class="bill_pple" id="billAmt" value="0">
+      <br />
+      <label for="bill">Number of People
+      </label><br />
+      <input type="number" class="bill_pple" id="numPeople" value="0">
+
       <p id=" select_tip_label">Select Tip %</p>
       <div class="button-list">
         <span class="visually-hidden"> Five Percent of Bill</span>
@@ -33,11 +38,9 @@
         <button onclick="twentyfv_percent()">25%</button>
         <span class="visually-hidden"> Fifty Percent of Bill</span>
         <button onclick="fifty_percent()">50%</button>
-        <input type="text" placeholder="$Custom" id="custom_input">
+        <input type="text" placeholder="%Custom" id="custom_input">
       </div>
-      <label for="bill">Number of People
-      </label><br />
-      <input type="number" class="bill_pple" id="numPeople" value="10">
+
     </div>
 
     <div class="tip-display-backg">

@@ -15,12 +15,12 @@ function TipPaymnts(x) {
 
   totalTipAmt = ((x / 100) * billCheque)
 
-  totalTipPerp = totalTipAmt / numPeople
+  totalTipPerp = Math.round(totalTipAmt / numPeople)
 
   TipPerEl.textContent = "$" + "" + totalTipPerp
 
   totalcashCost = totalTipAmt + Number(billCheque)
-  tipPerson = totalcashCost / numPeople
+  tipPerson = Math.round(totalcashCost / numPeople)
   tipEl.textContent = "$" + "" + tipPerson
   return tipPerson
 }
@@ -52,8 +52,16 @@ function fifty_percent() {
   TipPaymnts(50)
 }
 
+function custom_percent() {
+  custom_percent_value = document.getElementById("custom_percent").value;
+  TipPaymnts(custom_percent_value);
+} 
+
 function reset() {
   tipEl.textContent = "$" + "" + 0.00
   TipPerEl.textContent = "$" + "" + 0.00
+  document.getElementById("billAmt").value = 0
+
+  document.getElementById("numPeople").value = 0
 }
 
