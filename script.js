@@ -53,15 +53,16 @@ function fifty_percent() {
 }
 
 function custom_percent() {
-  custom_percent_value = document.getElementById("custom_percent").value;
-  TipPaymnts(custom_percent_value);
-} 
+  let custom_value = document.getElementById("custom_input").value
+custom_value
+TipPaymnts(custom_value);
+}
 
 function reset() {
   tipEl.textContent = "$" + "" + 0.00
   TipPerEl.textContent = "$" + "" + 0.00
   document.getElementById("billAmt").value = 0
-
   document.getElementById("numPeople").value = 0
+  document.getElementById("custom_input").value = 0
 }
 
